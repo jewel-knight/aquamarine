@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+<?import org.fxmisc.richtext.CodeArea?>
+
+<VBox fx:id="editorContainer"
+      styleClass="editorContainer"
+      alignment="CENTER" xmlns="http://javafx.com/javafx/20.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.impactcn.aquamarine.controller.EditorController">
+    <HBox  VBox.vgrow="ALWAYS">
+        <fx:include source="fileManage.fxml"/>
+        <VBox HBox.hgrow="ALWAYS" fx:id="editorInnerContainer" >
+            <HBox fx:id="editorTitle" styleClass="editorTitle" alignment="CENTER_RIGHT" prefHeight="40.0">
+                <HBox fx:id="editorTabContainer" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS"  />
+                <HBox alignment="CENTER">
+                    <Button fx:id="editorMode" prefHeight="20.0" prefWidth="20.0" styleClass="editorMode">
+                        <HBox.margin>
+                            <Insets right="5.0" />
+                        </HBox.margin></Button>
+                    <Button fx:id="previewMode" prefHeight="20.0" prefWidth="20.0" styleClass="previewMode" />
+                </HBox>
+            </HBox>
+            <HBox fx:id="inputAndOutputContainer" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+<!--                <fx:include source="input.fxml" prefWidth="450" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"  />-->
+<!--                <fx:include source="output.fxml" prefWidth="450"  HBox.hgrow="ALWAYS"  VBox.vgrow="ALWAYS" />-->
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>

@@ -1,0 +1,24 @@
+.fold {
+    -fx-background-image: url('../../img/leftBar/folder-line.png');
+}
+
+.fold:hover {
+    -fx-background-color: #505354;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.setting {
+    -fx-background-image: url('../../img/leftBar/settings-3-line.png');
+}
+
+.setting:hover {
+    -fx-background-color: #505354;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5
+}
+
+.leftBarContainer {
+    -fx-border-color: #323232 #323232  #3c3f41 #3c3f41;
+    /*-fx-border-color: #323232 ;*/
+}

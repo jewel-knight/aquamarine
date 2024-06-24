@@ -1,0 +1,99 @@
+
+@font-face {
+    src: url('../../font/JetBrainsMono/JetBrainsMono-Regular.ttf');
+}
+
+.root {
+    -fx-font-family: "JetBrains Mono";
+}
+
+/*全局 button 处理*/
+.button {
+    -fx-background-color:  #3c3f41;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-text-fill: #858789;
+}
+
+.button .text {
+    -fx-font-family: "Microsoft YaHei UI";
+    -fx-font-size: 14px;
+
+}
+
+.label .text {
+    -fx-font-family: "Microsoft YaHei UI";
+    -fx-font-size: 14px;
+
+}
+
+.tree-cell .text {
+    -fx-font-size: 14px;
+    -fx-font-family: "Microsoft YaHei UI";
+}
+
+.text {
+    -fx-fill: #cacfd2;
+    /*-fx-font-family: "Microsoft YaHei UI";*/
+}
+
+/*.button:hover {*/
+/*    -fx-background-color: #505354;*/
+/*}*/
+
+
+
+/*全局 text 处理*/
+/*.text {*/
+/*    -fx-fill: #cacfd2;*/
+/*    -fx-font-family: "Microsoft YaHei UI";*/
+/*    -fx-font-size: 16px;*/
+/*}*/
+
+.code-area {
+    -fx-background-color: #2b2b2b;
+}
+
+.paragraph-box {
+    -fx-font-family: "JetBrains Mono";
+    -fx-font-size: 18px;
+}
+
+
+
+
+/*修改输入光标颜色*/
+.caret {
+    -fx-stroke: #bbbbbb;
+}
+
+/*修改右键菜单栏*/
+.context-menu {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #515151;
+}
+
+.menu-item {
+    -fx-pref-height: 27;
+    -fx-pref-width: 350;
+    -fx-background-color: #3c3f41;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.pasteMenuItem {
+    -fx-border-color: transparent transparent #515151 transparent;
+}
+
+/*textField 输入*/
+.text-field {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #cacfd2;
+    -fx-font-size: 14;
+    -fx-font-family: "Microsoft YaHei UI";
+    -fx-highlight-fill: #214283;
+    -fx-prompt-text-fill: #878787;
+}
+
+
+

@@ -1,0 +1,70 @@
+.settingKey {
+    -fx-background-color: #3e434c;
+}
+
+.tree-view {
+    -fx-background-color: transparent;
+}
+
+.tree-cell {
+    -fx-background-color: #3e434c;
+    -fx-text-fill: #cacfd2;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cell-size: 20;
+}
+
+
+.tree-cell:filled:selected {
+    -fx-background-color: #4b6eaf; /* 更改选定的背景色为红色 */
+}
+
+
+/* 自定义展开和折叠图标 */
+.tree-cell:expanded > .tree-disclosure-node {
+    -fx-background-image: url("../../img/fileTree/arrow-drop-down-line.png"); /* 展开图标 */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.tree-cell:collapsed > .tree-disclosure-node {
+    -fx-background-image: url("../../img/fileTree/arrow-drop-right-line.png"); /* 折叠图标 */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.settingContentContainer {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #515151 transparent transparent transparent;
+}
+
+.settingBottomContainer {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #323232 transparent transparent transparent;
+}
+
+.okBtn {
+    -fx-background-color: #365880 !important;
+    -fx-border-color: #4c708c;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.cancelBtn {
+    -fx-background-color: #4c5052 !important;
+    -fx-border-color: #5e6060;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5
+}
+
+.applyBtn {
+    -fx-background-color: #3c3f41 !important;
+    -fx-border-color: #5e6060;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5
+}
+
+.settingInput {
+    -fx-border-color: #646464;
+    -fx-background-color: #45494a !important;
+}

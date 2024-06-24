@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.fxmisc.richtext.CodeArea?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.VBox?>
+<?import org.fxmisc.flowless.VirtualizedScrollPane?>
+
+<?import javafx.scene.layout.HBox?>
+<VBox fx:id="inputContainer" fx:controller="com.impactcn.aquamarine.controller.InputController"
+      styleClass="inputContainer"
+      xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/20.0.1" >
+    <HBox HBox.hgrow="ALWAYS" style="-fx-background-color: red" fx:id="findAndReplaceContainer">
+        <fx:include source="findAndReplace.fxml" />
+    </HBox>
+    <VirtualizedScrollPane VBox.vgrow="ALWAYS" fx:id="scrollPane">
+        <content>
+            <CodeArea fx:id="input"  styleClass="input" >
+                <contextMenu>
+                    <ContextMenu fx:id="contextMenu" styleClass="contextMenu">
+                        <items>
+                            <MenuItem fx:id="copyMenuItem" mnemonicParsing="false">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
+                            <MenuItem fx:id="cutMenuItem" mnemonicParsing="false">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
+                            <MenuItem fx:id="pasteMenuItem" mnemonicParsing="false" styleClass="pasteMenuItem">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
+                            <MenuItem fx:id="toPdfMenuItem" mnemonicParsing="false">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
+
+                            <MenuItem fx:id="generatePrefaceItem" mnemonicParsing="false">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
+
+                            <MenuItem fx:id="ragItem" mnemonicParsing="false">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
+                        </items>
+                    </ContextMenu>
+                </contextMenu>
+            </CodeArea>
+
+        </content>
+
+    </VirtualizedScrollPane>
+
+</VBox>

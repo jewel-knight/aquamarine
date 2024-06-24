@@ -1,0 +1,13 @@
+
+.editorTitleIcon {
+    -fx-background-image: url("../../img/fileTree/markdown.png"); /* 展开图标 */
+}
+
+.editorTitleClose {
+    -fx-background-image: url("../../img/titleBar/lose/x.png");
+}
+
+.editorTitle {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #323232 transparent #3c3f41 #323232;
+}

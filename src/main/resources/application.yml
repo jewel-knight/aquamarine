@@ -1,0 +1,19 @@
+spring:
+  main:
+    allow-circular-references: true
+    web-application-type: none
+    lazy-initialization: true
+  ai:
+    azure:
+      openai:
+        chat:
+          options:
+            model: chat-model
+        embedding:
+          options:
+            model: embedding-model
+        api-key: api-key
+        endpoint: endpoint
+
+file:
+  path: D:\\aq-test

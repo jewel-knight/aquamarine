@@ -1,0 +1,63 @@
+/*.findAndReplaceContainer {*/
+/*    -fx-background-color: #3c3f41;*/
+/*}*/
+
+
+
+.findInnerContainer .text-field, .replaceInnerContainer .text-field {
+    -fx-background-color: #45494a;
+}
+
+.result {
+    -fx-font-size: 12px;
+    -fx-font-family: "Microsoft YaHei UI";
+    -fx-fill: #878787;
+}
+
+.replaceContainer .replaceInnerButtonContainer .button {
+    -fx-border-color: #5e6060;
+    -fx-border-radius: 5;
+}
+
+.replaceContainer .replaceInnerButtonContainer .button .text {
+    -fx-font-size: 12px;
+    -fx-font-family: "Microsoft YaHei UI";
+    -fx-fill: #878787;
+}
+
+.replaceInnerContainer {
+    -fx-border-color: transparent #323232 transparent transparent;
+}
+
+.replaceInnerButtonContainer, .findMidContainer {
+    -fx-background-color: #3c3f41;
+}
+
+/*.findInput {*/
+/*    -fx-border-color: transparent transparent #323232 transparent;*/
+/*}*/
+.findAndReplaceContainer {
+    -fx-background-color: #45494a;
+}
+
+.findInnerContainer  {
+    -fx-border-color: transparent #323232 #323232 transparent;
+}
+
+.findBtn {
+    -fx-background-color: #45494a !important;
+}
+
+/*.composeClose:hover {*/
+/*    -fx-background-color: #505354;*/
+/*    -fx-background-radius: 0;*/
+/*    -fx-border-radius: 0;*/
+/*}*/
+
+.findClose {
+    -fx-background-image: url('../../img/titleBar/force/x.png');
+}
+
+.rightContainer {
+    -fx-background-color: #3c3f41;
+}

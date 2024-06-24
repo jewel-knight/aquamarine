@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="popUpContainer" styleClass="popUpContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="390.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.PopUpContextMenuController">
+    <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: #4a4e52; -fx-border-color: #4a4e52  #4a4e52 #646464 #4a4e52;">
+        <Label fx:id="popUpTitle" text="Label" textFill="#bbbbbb">
+            <font>
+                <Font name="Microsoft YaHei" size="16.0" />
+            </font>
+        </Label>
+    </HBox>
+    <HBox prefHeight="30.0" style="-fx-background-color: #3c3f41;">
+        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+        <TextField fx:id="popUpInput" prefHeight="30.0" promptText="Name" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>

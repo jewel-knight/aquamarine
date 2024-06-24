@@ -1,0 +1,10 @@
+.bottomBarContainer {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: #464646 transparent transparent transparent;
+}
+
+.wordsCount{
+    -fx-font-size: 14px;
+    -fx-font-family: "Microsoft YaHei UI";
+    -fx-fill: #cacfd2;
+}

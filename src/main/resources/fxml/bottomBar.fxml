@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="bottomContainer" alignment="CENTER_RIGHT"
+      maxHeight="-Infinity"
+      minHeight="-Infinity"
+      prefHeight="30.0"
+      styleClass="bottomBarContainer" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.BottomBarController">
+    <Text styleClass="wordsCount" text="0 Words" fx:id="wordsCount">
+        <HBox.margin>
+            <Insets right="8.0" />
+        </HBox.margin>
+    </Text>
+</HBox>

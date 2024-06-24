@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="projContainer"
+      xmlns="http://javafx.com/javafx/20.0.1"
+      minWidth="-Infinity"
+      fx:controller="com.impactcn.aquamarine.controller.FileManageController"
+      xmlns:fx="http://javafx.com/fxml/1">
+    <HBox fx:id="fileSettingContainer" minWidth="-Infinity" alignment="CENTER_RIGHT" prefHeight="40.0" style="-fx-background-color: #3c3f41; -fx-border-color: #323232 transparent transparent transparent">
+        <!--                <Button  prefHeight="25.0" prefWidth="25.0" text="Button" />-->
+        <!--                <Button  prefHeight="25.0" prefWidth="25.0" text="Button" />-->
+        <!--                <Button  prefHeight="25.0" prefWidth="25.0" text="Button" />-->
+        <!--                <Button  prefHeight="25.0" prefWidth="25.0" text="Button" />-->
+        <!--                <Button  prefHeight="25.0" prefWidth="25.0" text="Button" />-->
+    </HBox>
+    <HBox fx:id="fileContainer" minWidth="-Infinity"  VBox.vgrow="ALWAYS"
+          alignment="CENTER" style="-fx-background-color: #3c3f41; -fx-border-color: transparent transparent transparent transparent" >
+        <TreeView fx:id="fileTree" prefWidth="130.0" VBox.vgrow="ALWAYS" >
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="newFileItem" mnemonicParsing="false">
+                            <graphic>
+                                <fx:include source="contextMenu.fxml" />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="deleteFileItem" mnemonicParsing="false">
+                            <graphic>
+                                <fx:include source="contextMenu.fxml" />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="renameFileItem" mnemonicParsing="false">
+                            <graphic>
+                                <fx:include source="contextMenu.fxml" />
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </TreeView>
+    </HBox>
+</VBox>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox fx:id="contextMenuContainer" style="-fx-background-color: #3c3f41; -fx-border-color: #3c3f41;" styleClass="contextMenuContainer" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.ContextMenuController">
+   <HBox fx:id="hBoxLeft" alignment="CENTER_LEFT">
+      <ImageView fx:id="menuIcon" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets left="5.0" />
+         </HBox.margin>
+      </ImageView>
+      <Label fx:id="menuTextLeft" prefWidth="150" text="Label" textFill="#bbbbbb">
+         <padding>
+            <Insets left="4.0" />
+         </padding></Label>
+
+   </HBox>
+   <HBox fx:id="hBoxRight" alignment="CENTER_RIGHT">
+      <Label fx:id="menuTextRight" alignment="CENTER_RIGHT" prefWidth="168" text="Label" textFill="#bbbbbb">
+      <padding>
+         <Insets right="10.0" />
+      </padding>
+      </Label>
+   </HBox>
+</HBox>

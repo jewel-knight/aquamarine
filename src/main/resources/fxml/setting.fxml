@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="settingContainer" prefHeight="730.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.SettingController">
+   <HBox prefHeight="40.0" styleClass="titleBar" fx:id="titleBar">
+      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="icon" text="A" />
+         <Label text="Settings" />
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+         <Button fx:id="closeBtn" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="close" />
+      </HBox>
+   </HBox>
+   <HBox fx:id="settingContentContainer" prefHeight="645.0" styleClass="settingContentContainer">
+      <VBox prefHeight="645.0" prefWidth="250.0" styleClass="settingKey">
+         <TreeView fx:id="settingTree" prefHeight="645.0" prefWidth="250.0">
+            <padding>
+               <Insets top="10.0" />
+            </padding>
+         </TreeView>
+      </VBox>
+      <VBox fx:id="settingProperty" prefHeight="645.0" prefWidth="750.0" />
+   </HBox>
+   <HBox alignment="CENTER_RIGHT" prefHeight="45.0" styleClass="settingBottomContainer">
+      <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="70.0" styleClass="okBtn" text="OK">
+         <HBox.margin>
+            <Insets right="15.0" />
+         </HBox.margin>
+      </Button>
+      <Button fx:id="cancelBtn" mnemonicParsing="false" prefHeight="20.0" prefWidth="70.0" styleClass="cancelBtn" text="Cancel">
+         <HBox.margin>
+            <Insets right="15.0" />
+         </HBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="70.0" styleClass="applyBtn" text="Apply">
+         <HBox.margin>
+            <Insets right="15.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+</VBox>

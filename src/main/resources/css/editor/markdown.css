@@ -1,0 +1,186 @@
+.global {
+    -fx-fill: #cacfd2;
+}
+
+.codeText {
+    -fx-fill: #6a8759;
+}
+.code {
+    -fx-fill: #cc7832;
+}
+
+.orderedListItem {
+    -fx-fill: #cc7832;
+}
+
+.bulletListItem {
+    -fx-fill: #cc7832;
+
+}
+
+.blockQuote {
+    -fx-fill: #cc7832;
+}
+
+.blockQuoteText {
+    -fx-fill: #6a8759;
+}
+
+.tableBlock {
+    -fx-fill: #cc7832;
+
+}
+
+.tableSeparator {
+    -fx-fill: #cc7832;
+}
+
+
+.heading {
+    -fx-fill: #cc7832;
+    -fx-font-style: italic;
+}
+
+.headingText {
+    -fx-fill: #9876aa;
+    -fx-font-style: italic;
+}
+
+.fencedCodeBlock {
+    -fx-fill: #cc7832;
+}
+
+.fencedCodeBlockText {
+    -fx-fill: #6a8759;
+}
+
+.fencedCodeBlockInfo {
+    -fx-fill: #9876aa;
+
+}
+
+.emphasis {
+    -fx-fill: #cc7832;
+}
+
+.strongEmphasis {
+    -fx-fill: #cc7832;
+}
+
+/*.headval {*/
+/*    -fx-fill: #9876aa;*/
+/*}*/
+
+.br {
+    -fx-fill: #cc7832;
+}
+
+/*.quote {*/
+/*    -fx-fill: #6a8759;*/
+/*}*/
+
+.linkText {
+    -fx-fill: #287bb9;
+}
+
+.linkHref {
+    -fx-fill: #6a8759;
+}
+
+.linkTitle {
+    -fx-fill: #6a8759;
+}
+
+.linkUrl {
+    -fx-fill: #287bb9;
+    -rtfx-underline-color: #287bb9;
+    -rtfx-underline-width: 1.0;
+}
+
+.imageRefText {
+    -fx-fill: #287bb9;
+}
+
+.imageRefHref {
+    -fx-fill: #cc7832;
+}
+
+.imageText {
+    -fx-fill: #287bb9;
+}
+.imageHref {
+    -fx-fill: #6a8759;
+}
+
+.imageUrl {
+    -fx-fill: #287bb9;
+    -rtfx-underline-color: #287bb9;
+    -rtfx-underline-width: 1.0;
+}
+
+.imageTitle {
+    -fx-fill: #6a8759;
+}
+
+.referenceText {
+    -fx-fill: #cc7832;
+}
+
+.referenceUrl {
+    -fx-fill: #ffc66d;
+    -fx-font-style: italic;
+}
+
+.referenceTitle {
+    -fx-fill: #6a8759;
+}
+
+.linkRefText {
+    -fx-fill: #287bb9;
+    -rtfx-underline-color: #287bb9;
+    -rtfx-underline-width: 1.0;
+}
+
+.linkRefHref {
+    -fx-fill: #cc7832;
+
+}
+
+.footnote {
+    -fx-fill: #cc7832;
+}
+
+.strikethrough {
+    -fx-strikethrough: true;
+    -fx-stroke-width: 0.5;
+
+}
+
+
+/*.order {*/
+/*    -fx-fill: #cc7832;*/
+/*}*/
+
+/*.disorder {*/
+/*    -fx-fill: #cc7832;*/
+/*}*/
+
+/*.bold {*/
+/*    -fx-fill: #287bb9;*/
+/*}*/
+
+.underline {
+    -rtfx-underline-wave-radius: 1;
+    -rtfx-underline-color: #8f8f6c;
+    -rtfx-underline-width: 1.0;
+}
+
+/*.findWord{*/
+/*    -fx-fill: red;*/
+/*    !*-rtfx-background-color: #32593d;*!*/
+/*    !*-fx-background-color: #32593d;*!*/
+/*    !*-rtfx-border-stroke-type: inside;*!*/
+/*    !*-rtfx-border-stroke-type: outside;*!*/
+/*    !*-rtfx-border-stroke-width: 1;*!*/
+/*    !*-rtfx-border-stroke-color: red;*!*/
+/*}*/

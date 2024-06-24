@@ -1,0 +1,36 @@
+
+.minimize {
+    -fx-background-image: url('../../img/titleBar/force/minus.png');
+}
+
+.minimize:hover {
+    -fx-background-color: #505354;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.restoreDown {
+    -fx-background-image: url('../../img/titleBar/force/square.png');
+}
+
+.restoreDown:hover {
+    -fx-background-color: #505354;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+
+.close {
+    -fx-background-image: url('../../img/titleBar/force/x.png');
+}
+
+.close:hover {
+    -fx-background-color: #e81123;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.titleBar {
+    -fx-background-color: #3c3f41;
+    -fx-border-color: transparent;
+}

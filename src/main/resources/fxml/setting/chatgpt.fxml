@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.setting.ChatGPTController">
+
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="15.0" />
+   </padding>
+   <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="735.0">
+      <padding>
+         <Insets top="20.0" />
+      </padding>
+      <Label text="ChatGPT " />
+   </HBox>
+   <VBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="735.0">
+      <padding>
+         <Insets top="40.0" />
+      </padding>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="735.0">
+         <Label text="Settings" />
+         <Line endX="570.0" startX="-100.0" stroke="#515151" />
+      </HBox>
+   </VBox>
+   <VBox prefHeight="28.0" prefWidth="735.0">
+      <padding>
+         <Insets left="20.0" top="25.0" />
+      </padding>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="735.0">
+         <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="80.0">
+            <Label text="Api Key:" />
+         </HBox>
+         <HBox prefHeight="100.0" prefWidth="630.0">
+            <TextField prefHeight="23.0" prefWidth="615.0" styleClass="settingInput" />
+         </HBox>
+      </HBox>
+   </VBox>
+   <VBox prefHeight="14.0" prefWidth="735.0">
+      <padding>
+         <Insets left="20.0" top="25.0" />
+      </padding>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="80.0">
+            <Label text="Endpoint:" />
+         </HBox>
+         <HBox prefHeight="100.0" prefWidth="630.0">
+            <TextField prefHeight="23.0" prefWidth="615.0" styleClass="settingInput" />
+         </HBox>
+      </HBox>
+   </VBox>
+   <VBox prefHeight="14.0" prefWidth="735.0">
+      <padding>
+         <Insets left="20.0" top="25.0" />
+      </padding>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="80.0">
+            <Label text="Model:" />
+         </HBox>
+         <HBox prefHeight="23.0" prefWidth="630.0">
+            <TextField prefHeight="23.0" prefWidth="615.0" styleClass="settingInput" />
+         </HBox>
+      </HBox>
+   </VBox>
+</VBox>

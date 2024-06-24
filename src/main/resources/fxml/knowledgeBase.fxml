@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="670.0"
+      prefHeight="700.0"
+      xmlns="http://javafx.com/javafx/20.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="knowledgeBaseContainer"
+      fx:controller="com.impactcn.aquamarine.controller.KnowledgeBaseController">
+    <TextArea fx:id="output" prefHeight="655"  style="
+    -fx-control-inner-background: #3c3f41;
+    -fx-background-color: #3c3f41;
+     -fx-text-fill: #cacfd2;
+        -fx-font-size: 16px;
+        -fx-border-color: #616161;
+          -fx-focus-color: #3c3f41;
+            -fx-faint-focus-color: #3c3f41; " />
+    <TextField fx:id="input" prefHeight="45.0"  promptText="Send..." style="     -fx-background-color: #3c3f41;     -fx-border-color: #616161">
+    </TextField>
+</VBox>
