@@ -7,7 +7,7 @@
 <?import org.fxmisc.flowless.VirtualizedScrollPane?>
 
 <?import javafx.scene.layout.HBox?>
-<VBox fx:id="inputContainer" fx:controller="com.impactcn.aquamarine.controller.InputController"
+<VBox fx:id="inputContainer" fx:controller="org.jewel.knight.aquamarine.controller.InputController"
       styleClass="inputContainer"
       xmlns:fx="http://javafx.com/fxml/1"
       xmlns="http://javafx.com/javafx/20.0.1" >

@@ -14,7 +14,7 @@
       styleClass="editorContainer"
       alignment="CENTER" xmlns="http://javafx.com/javafx/20.0.1"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.impactcn.aquamarine.controller.EditorController">
+      fx:controller="org.jewel.knight.aquamarine.controller.EditorController">
     <HBox  VBox.vgrow="ALWAYS">
         <fx:include source="fileManage.fxml"/>
         <VBox HBox.hgrow="ALWAYS" fx:id="editorInnerContainer" >

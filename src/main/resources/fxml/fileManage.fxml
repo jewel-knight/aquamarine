@@ -6,7 +6,7 @@
 <VBox fx:id="projContainer"
       xmlns="http://javafx.com/javafx/20.0.1"
       minWidth="-Infinity"
-      fx:controller="com.impactcn.aquamarine.controller.FileManageController"
+      fx:controller="org.jewel.knight.aquamarine.controller.FileManageController"
       xmlns:fx="http://javafx.com/fxml/1">
     <HBox fx:id="fileSettingContainer" minWidth="-Infinity" alignment="CENTER_RIGHT" prefHeight="40.0" style="-fx-background-color: #3c3f41; -fx-border-color: #323232 transparent transparent transparent">
         <!--                <Button  prefHeight="25.0" prefWidth="25.0" text="Button" />-->

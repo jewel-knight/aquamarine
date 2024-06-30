@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox fx:id="contextMenuContainer" style="-fx-background-color: #3c3f41; -fx-border-color: #3c3f41;" styleClass="contextMenuContainer" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.ContextMenuController">
+<HBox fx:id="contextMenuContainer" style="-fx-background-color: #3c3f41; -fx-border-color: #3c3f41;" styleClass="contextMenuContainer" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jewel.knight.aquamarine.controller.ContextMenuController">
    <HBox fx:id="hBoxLeft" alignment="CENTER_LEFT">
       <ImageView fx:id="menuIcon" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
          <HBox.margin>

@@ -3,7 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox fx:id="titleBarContainer" styleClass="titleBar" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="40.0" prefWidth="1400.0"  xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.TitleBarController">
+<HBox fx:id="titleBarContainer" styleClass="titleBar" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="40.0" prefWidth="1400.0"  xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jewel.knight.aquamarine.controller.TitleBarController">
    <HBox fx:id="left" alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
       <Button styleClass="icon" fx:id="icon" mnemonicParsing="false"  prefHeight="40.0" prefWidth="40.0" text="A"/>
    </HBox>

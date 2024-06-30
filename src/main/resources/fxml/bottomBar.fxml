@@ -8,7 +8,7 @@
       maxHeight="-Infinity"
       minHeight="-Infinity"
       prefHeight="30.0"
-      styleClass="bottomBarContainer" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.BottomBarController">
+      styleClass="bottomBarContainer" HBox.hgrow="ALWAYS" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jewel.knight.aquamarine.controller.BottomBarController">
     <Text styleClass="wordsCount" text="0 Words" fx:id="wordsCount">
         <HBox.margin>
             <Insets right="8.0" />

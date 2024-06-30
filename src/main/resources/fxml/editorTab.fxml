@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 
 <HBox fx:id="editorTitleContainer" styleClass="editorTitleContainer"
-      alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.impactcn.aquamarine.controller.EditorTabController">
+      alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="org.jewel.knight.aquamarine.controller.EditorTabController">
     <Button fx:id="editorTitleIcon" mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0" styleClass="editorTitleIcon">
       <opaqueInsets>
          <Insets />

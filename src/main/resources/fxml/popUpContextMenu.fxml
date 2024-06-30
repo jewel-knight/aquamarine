@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="popUpContainer" styleClass="popUpContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="390.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.PopUpContextMenuController">
+<VBox fx:id="popUpContainer" styleClass="popUpContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="390.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jewel.knight.aquamarine.controller.PopUpContextMenuController">
     <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: #4a4e52; -fx-border-color: #4a4e52  #4a4e52 #646464 #4a4e52;">
         <Label fx:id="popUpTitle" text="Label" textFill="#bbbbbb">
             <font>

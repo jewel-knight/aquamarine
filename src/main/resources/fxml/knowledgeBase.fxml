@@ -10,7 +10,7 @@
       xmlns="http://javafx.com/javafx/20.0.1"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:id="knowledgeBaseContainer"
-      fx:controller="com.impactcn.aquamarine.controller.KnowledgeBaseController">
+      fx:controller="org.jewel.knight.aquamarine.controller.KnowledgeBaseController">
     <TextArea fx:id="output" prefHeight="655"  style="
     -fx-control-inner-background: #3c3f41;
     -fx-background-color: #3c3f41;
