@@ -9,7 +9,7 @@
        prefWidth="40.0"  style="-fx-background-color: #3c3f41"
        styleClass="leftBarContainer"
        xmlns="http://javafx.com/javafx/20.0.1"
-       xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.LeftBarController">
+       xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jewel.knight.aquamarine.controller.LeftBarController">
    <HBox fx:id="topPart" alignment="TOP_CENTER"
          style="-fx-background-color: #3c3f41;" VBox.vgrow="ALWAYS"  >
       <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" styleClass="fold" fx:id="foldBtn">

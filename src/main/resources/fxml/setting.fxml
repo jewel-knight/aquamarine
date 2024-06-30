@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="settingContainer" prefHeight="730.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.impactcn.aquamarine.controller.SettingController">
+<VBox fx:id="settingContainer" prefHeight="730.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jewel.knight.aquamarine.controller.SettingController">
    <HBox prefHeight="40.0" styleClass="titleBar" fx:id="titleBar">
       <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
          <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="icon" text="A" />
