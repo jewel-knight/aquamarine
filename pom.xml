@@ -11,7 +11,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>com.impactcn</groupId>
+  <groupId>org.jewel.knight</groupId>
   <artifactId>aquamarine</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>aquamarine</name>
