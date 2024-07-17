@@ -61,7 +61,7 @@ public class InputController implements Initializable {
     private static final LangGrammarCheck LANG_GRAMMAR_CHECK = new LangGrammarCheck();
 
     @FXML
-    private HBox findAndReplaceContainer;
+    private HBox findAndReplaceOuterContainer;
 
     @FXML
     private CodeArea input;
@@ -88,6 +88,10 @@ public class InputController implements Initializable {
     @FXML
     private VirtualizedScrollPane<CodeArea> scrollPane;
 
+    public VirtualizedScrollPane<CodeArea> getScrollPane() {
+        return scrollPane;
+    }
+
     @Value("${file.path}")
     private String path;
 
@@ -110,7 +114,10 @@ public class InputController implements Initializable {
     @Autowired
     private KnowledgeBaseController knowledgeBaseController;
 
-
+    /**
+     * 是否第一次加载
+     */
+    private boolean isFirst = true;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -121,6 +128,8 @@ public class InputController implements Initializable {
         inputKeyPressEvent.setOnKeyPress();
 
         input.setWrapText(true);
+
+        calculateWidth();
 
         initLineNumber();
 
@@ -168,8 +177,28 @@ public class InputController implements Initializable {
         return input;
     }
 
-    public HBox getFindAndReplaceContainer() {
-        return findAndReplaceContainer;
+    public HBox getFindAndReplaceOuterContainer() {
+        return findAndReplaceOuterContainer;
+    }
+
+
+    /**
+     * 计算空白处的宽度
+     * 等于 input 的宽度 - 实际占用宽度（输入&按钮的地方）
+     */
+    private void calculateWidth() {
+        int thumbWidth = 12;
+        HBox blankContainer = (HBox) findAndReplaceOuterContainer.lookup("#blankContainer");
+        HBox replaceInnerContainer = (HBox) findAndReplaceOuterContainer.lookup("#replaceInnerContainer");
+        HBox replaceInnerButtonContainer = (HBox) findAndReplaceOuterContainer.lookup("#replaceInnerButtonContainer");
+        input.widthProperty().addListener((observableValue, number, t1) -> {
+            if (isFirst) {
+                blankContainer.setPrefWidth(200);
+                isFirst = false;
+            } else {
+                blankContainer.setPrefWidth(t1.doubleValue() + thumbWidth - replaceInnerContainer.getWidth() - replaceInnerButtonContainer.getWidth());
+            }
+        });
     }
 
 

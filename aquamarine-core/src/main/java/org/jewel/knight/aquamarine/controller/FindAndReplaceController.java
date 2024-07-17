@@ -1,5 +1,7 @@
 package org.jewel.knight.aquamarine.controller;
 
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import org.jewel.knight.aquamarine.markdown.Search;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,11 +31,12 @@ public class FindAndReplaceController implements Initializable {
 
     private final static Map<CodeArea, int[]> RESULTS = new HashMap<>();
 
+
     @FXML
     private VBox findAndReplaceContainer;
 
     @FXML
-    private Button findClose;
+    private Button findCloseBtn;
 
 
     @FXML
@@ -69,8 +72,8 @@ public class FindAndReplaceController implements Initializable {
      * 关闭查找和替换
      */
     private void hideFindAndReplace() {
-        findClose.setOnAction(event -> {
-            inputController.getFindAndReplaceContainer().setVisible(false);
+        findCloseBtn.setOnAction(event -> {
+            editorController.cleaFindAndReplaceContainer();
         });
     }
 

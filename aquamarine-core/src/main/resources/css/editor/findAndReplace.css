@@ -54,7 +54,7 @@
 /*    -fx-border-radius: 0;*/
 /*}*/
 
-.findClose {
+.findCloseBtn {
     -fx-background-image: url('../../img/titleBar/force/x.png');
 }
 
