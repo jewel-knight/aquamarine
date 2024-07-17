@@ -67,6 +67,15 @@ public class EditorController implements Initializable {
     }
 
     /**
+     * 关闭当前的查询
+     */
+    public void cleaFindAndReplaceContainer() {
+        VBox input = getInputVBox();
+        Node findAndReplaceContainer = input.lookup("#findAndReplaceOuterContainer");
+        input.getChildren().remove(findAndReplaceContainer);
+    }
+
+    /**
      * 获取当前的 output
      * @return
      */
