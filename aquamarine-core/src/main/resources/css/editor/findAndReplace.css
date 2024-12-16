@@ -25,12 +25,18 @@
     -fx-fill: #878787;
 }
 
+.replaceInnerButtonContainer {
+    -fx-background-color: #3c3f41;
+    /*-fx-border-color: #323232;*/
+}
+
 .replaceInnerContainer {
     -fx-border-color: transparent #323232 transparent transparent;
 }
 
-.replaceInnerButtonContainer, .findMidContainer {
+.findMidContainer {
     -fx-background-color: #3c3f41;
+    /*-fx-border-color: transparent transparent #323232 transparent;*/
 }
 
 /*.findInput {*/
@@ -60,4 +66,5 @@
 
 .rightContainer {
     -fx-background-color: #3c3f41;
+    /*-fx-border-color: transparent transparent #323232 transparent;*/
 }

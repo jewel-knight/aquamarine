@@ -30,7 +30,7 @@
             </HBox.margin>
             </Button>
         </HBox>
-        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="100.0" styleClass="findMidContainer" HBox.hgrow="ALWAYS">
+        <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="250.0" styleClass="findMidContainer" HBox.hgrow="ALWAYS">
             <Text fx:id="resultText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="result" text="0 results">
                 <HBox.margin>
                     <Insets left="30.0" />
@@ -49,16 +49,18 @@
         <HBox fx:id="replaceInnerContainer" prefHeight="40.0" prefWidth="312.0" styleClass="replaceInnerContainer">
             <TextField fx:id="replaceInput" prefHeight="40.0" prefWidth="312.0" promptText="Replace" />
         </HBox>
-        <HBox fx:id="replaceInnerButtonContainer" alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="100.0" styleClass="replaceInnerButtonContainer" HBox.hgrow="ALWAYS">
+        <HBox fx:id="replaceInnerButtonContainer" alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="250.0" styleClass="replaceInnerButtonContainer" HBox.hgrow="ALWAYS">
             <Button fx:id="replace" mnemonicParsing="false" prefHeight="20.0" text="Replace">
             <HBox.margin>
                <Insets left="10.0" />
-            </HBox.margin></Button>
+            </HBox.margin>
+            </Button>
             <Button fx:id="replaceAll" mnemonicParsing="false" prefHeight="20.0" text="Replace All">
             <HBox.margin>
                <Insets left="8.0" />
             </HBox.margin>
             </Button>
+
         </HBox>
       <HBox fx:id="blankContainer"  />
 

@@ -129,7 +129,7 @@ public class InputController implements Initializable {
 
         input.setWrapText(true);
 
-        calculateWidth();
+//        calculateWidth();
 
         initLineNumber();
 
