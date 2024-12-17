@@ -1,5 +1,10 @@
 package org.jewel.knight.aquamarine.controller;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.util.Duration;
 import org.jewel.knight.aquamarine.service.PromptService;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -33,6 +38,8 @@ public class KnowledgeBaseController implements Initializable {
 
     private static final Popup FLOATING_POPUP = new Popup();
 
+    private String inputText = "";
+
     @Autowired
     private StageManager stageManager;
 
@@ -45,18 +52,20 @@ public class KnowledgeBaseController implements Initializable {
         output.setWrapText(true);
         input.setOnKeyPressed(event -> {
             if (event.getCode().getName().equals("Enter")) {
+                inputText = input.getText();
+                output.appendText("you: \n" + inputText + "\n\n");
+                input.clear();
 
-                Platform.runLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        String text = input.getText();
-                        output.appendText("you: \n" + text + "\n\n");
-                        input.clear();
-                        String rag = promptService.rag(text);
-                        output.appendText("assistant: \n" + rag + "\n\n");
-                    }
-                });
-
+                output.appendText( "assistant: \n" + "...loading");
+            }
+        });
+        // 监听输入框的变化
+        input.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                output.deleteText( output.getLength() - 10, output.getLength());
+                String rag = promptService.rag(inputText);
+                rag = rag + "\n\n";
+                createTextAnimation(rag).play();
             }
         });
 
@@ -84,5 +93,24 @@ public class KnowledgeBaseController implements Initializable {
                 (knowledgeBaseContainer.getPrefWidth() / 2);
 
         FLOATING_POPUP.show(stageManager.getMainStage(), currX, currY);
+    }
+
+    private Timeline createTextAnimation(String text) {
+        Timeline timeline = new Timeline();
+
+        for (int i = 0; i < text.length(); i++) {
+            final int index = i;
+            KeyFrame keyFrame = new KeyFrame(
+                    Duration.seconds(i * 0.05), // 逐字显示的速度
+                    event -> {
+                        output.appendText(String.valueOf(text.charAt(index)));
+//                        input.replaceText(text.substring(0, index) + originText);
+//                        input.moveTo(input.getLength());
+                    }
+            );
+            timeline.getKeyFrames().add(keyFrame);
+        }
+
+        return timeline;
     }
 }
