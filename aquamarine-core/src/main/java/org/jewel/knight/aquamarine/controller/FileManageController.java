@@ -206,13 +206,14 @@ public class FileManageController implements Initializable {
         contextMenuController.setMenu(hBox, leftText, rightText, imageUrl);
     }
 
-    @EventListener
-    public void listen(FileEvent fileEvent) {
-        Platform.runLater(() -> {
-            fileTree.getRoot().getChildren().clear();
-            listenFileTree();
-        });
-    }
+//    @EventListener
+//    public void listen(FileEvent fileEvent) {
+////        Platform.runLater(() -> {
+//        System.err.println(fileEvent);
+//        fileTree.getRoot().getChildren().clear();
+//        listenFileTree();
+////        });
+//    }
 
     private void listenFileTree() {
         Pair<String, File[]> files = fileService.getFiles(path);

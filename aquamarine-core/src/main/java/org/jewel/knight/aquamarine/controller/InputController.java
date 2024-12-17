@@ -269,6 +269,7 @@ public class InputController implements Initializable {
 
 
         generatePrefaceItem.setOnAction(event -> {
+
             Platform.runLater(() -> {
                 String preface = promptService.preface(input.getText());
                 String quotesText = "> " + preface + "\n";
