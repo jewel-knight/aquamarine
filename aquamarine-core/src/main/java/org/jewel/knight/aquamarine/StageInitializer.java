@@ -23,9 +23,12 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
+
+import java.io.File;
 
 /**
  * @author impactCn
@@ -44,6 +47,8 @@ public class StageInitializer implements ApplicationListener<UiApplication.Stage
         this.applicationContext = applicationContext;
     }
 
+    @Value("${file.path}")
+    private String path;
 
     @Autowired
     private StageManager stageManager;
@@ -60,7 +65,7 @@ public class StageInitializer implements ApplicationListener<UiApplication.Stage
     @Override
     public void onApplicationEvent(UiApplication.StageReadyEvent event) {
         Stage stage = event.getStage();
-
+        initSource();
         startUpPage(stage);
 
         new Thread(() -> {
@@ -101,6 +106,14 @@ public class StageInitializer implements ApplicationListener<UiApplication.Stage
                 titleBarController.titleBarContainer.setPrefWidth(t1.doubleValue());
             }
         });
+    }
+
+    private void initSource() {
+        File directory = new File(path);
+
+        if (!directory.exists()) {
+            directory.mkdir();
+        }
     }
 
     private void startUpPage(Stage stage) {
