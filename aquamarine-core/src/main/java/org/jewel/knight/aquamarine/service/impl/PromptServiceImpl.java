@@ -39,6 +39,9 @@ public class PromptServiceImpl implements PromptService {
     @Value("classpath:/prompt/system-qa.st")
     private Resource systemQaPromptResource;
 
+    @Value("classpath:/prompt/suggest.st")
+    private Resource suggestPromptResource;
+
     @Value("${file.path}")
     private String path;
 
@@ -57,14 +60,7 @@ public class PromptServiceImpl implements PromptService {
 
     @Override
     public String preface(String text) {
-        SystemPromptTemplate systemPromptTemplate = new SystemPromptTemplate(prefacePromptResource);
-
-        Message message = systemPromptTemplate.createMessage(Map.of("documents", text));
-
-        UserMessage userMessage = new UserMessage(text);
-        Prompt prompt = new Prompt(List.of(message, userMessage));
-        ChatResponse generate = azureOpenAiChatClient.call(prompt);
-        return generate.getResult().getOutput().getContent();
+        return chat(text, prefacePromptResource);
     }
 
 
@@ -79,17 +75,12 @@ public class PromptServiceImpl implements PromptService {
 
     }
 
-    private Message getSystemMessage(String text) {
-        SearchRequest searchRequest = SearchRequest.query(text)
-                .withTopK(3)
-                .withSimilarityThreshold(0.7);
-
-        List<Document> similarDocuments = simpleVectorStore.similaritySearch(searchRequest);
-        String documents = similarDocuments.stream().map(Document::getContent).collect(Collectors.joining("\n"));
-        SystemPromptTemplate systemPromptTemplate = new SystemPromptTemplate(this.systemQaPromptResource);
-        return systemPromptTemplate.createMessage(Map.of("documents", documents, "message", text));
+    @Override
+    public String suggest(String text) {
+        return chat(text, suggestPromptResource);
     }
 
+    @Override
     public void initData() {
         if (!isInit) {
 
@@ -110,5 +101,28 @@ public class PromptServiceImpl implements PromptService {
         }
 
     }
+
+    private Message getSystemMessage(String text) {
+        SearchRequest searchRequest = SearchRequest.query(text)
+                .withTopK(3)
+                .withSimilarityThreshold(0.7);
+
+        List<Document> similarDocuments = simpleVectorStore.similaritySearch(searchRequest);
+        String documents = similarDocuments.stream().map(Document::getContent).collect(Collectors.joining("\n"));
+        SystemPromptTemplate systemPromptTemplate = new SystemPromptTemplate(this.systemQaPromptResource);
+        return systemPromptTemplate.createMessage(Map.of("documents", documents, "message", text));
+    }
+
+    private String chat(String text, Resource resource) {
+        SystemPromptTemplate systemPromptTemplate = new SystemPromptTemplate(resource);
+
+        Message message = systemPromptTemplate.createMessage(Map.of("documents", text));
+
+        UserMessage userMessage = new UserMessage(text);
+        Prompt prompt = new Prompt(List.of(message, userMessage));
+        ChatResponse generate = azureOpenAiChatClient.call(prompt);
+        return generate.getResult().getOutput().getContent();
+    }
+
 
 }

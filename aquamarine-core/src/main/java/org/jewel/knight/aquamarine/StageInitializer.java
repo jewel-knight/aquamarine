@@ -22,6 +22,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.jewel.knight.aquamarine.service.PromptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
@@ -61,6 +62,9 @@ public class StageInitializer implements ApplicationListener<UiApplication.Stage
 
     @Autowired
     private TitleBarController titleBarController;
+
+    @Autowired
+    private PromptService promptService;
 
     @Override
     public void onApplicationEvent(UiApplication.StageReadyEvent event) {
@@ -109,6 +113,11 @@ public class StageInitializer implements ApplicationListener<UiApplication.Stage
     }
 
     private void initSource() {
+        createDir();
+        promptService.initData();
+    }
+
+    private void createDir() {
         File directory = new File(path);
 
         if (!directory.exists()) {

@@ -15,5 +15,12 @@ public interface PromptService {
 
     String rag(String text);
 
+    /**
+     * 写作润色
+     * @param text
+     * @return
+     */
+    String suggest(String text);
+
     void initData();
 }
