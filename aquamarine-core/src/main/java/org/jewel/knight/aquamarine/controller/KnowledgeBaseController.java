@@ -35,10 +35,11 @@ public class KnowledgeBaseController implements Initializable {
     @FXML
     private TextField input;
 
-
     private static final Popup FLOATING_POPUP = new Popup();
 
     private String inputText = "";
+
+    private final static String LOADING_TEXT = "...loading";
 
     @Autowired
     private StageManager stageManager;
@@ -56,13 +57,13 @@ public class KnowledgeBaseController implements Initializable {
                 output.appendText("you: \n" + inputText + "\n\n");
                 input.clear();
 
-                output.appendText( "assistant: \n" + "...loading");
+                output.appendText( "assistant: \n" + LOADING_TEXT);
             }
         });
         // 监听输入框的变化
         input.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
             if (event.getCode() == KeyCode.ENTER) {
-                output.deleteText( output.getLength() - 10, output.getLength());
+                output.deleteText( output.getLength() - LOADING_TEXT.length(), output.getLength());
                 String rag = promptService.rag(inputText);
                 rag = rag + "\n\n";
                 createTextAnimation(rag).play();

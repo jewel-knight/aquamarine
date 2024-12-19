@@ -52,6 +52,12 @@
                                     <fx:include source="contextMenu.fxml" />
                                 </graphic>
                             </MenuItem>
+
+                            <MenuItem fx:id="suggestItem" mnemonicParsing="false">
+                                <graphic>
+                                    <fx:include source="contextMenu.fxml" />
+                                </graphic>
+                            </MenuItem>
                         </items>
                     </ContextMenu>
                 </contextMenu>
