@@ -1,5 +1,6 @@
 package org.jewel.knight.aquamarine.controller;
 
+import javafx.scene.input.KeyEvent;
 import org.jewel.knight.aquamarine.service.FileService;
 import org.jewel.knight.aquamarine.service.impl.FileServiceImpl;
 import javafx.event.EventHandler;
@@ -40,10 +41,11 @@ public class PopUpContextMenuController implements Initializable {
     @Autowired
     private StageManager stageManager;
 
-
-
     @Autowired
     private FileService fileService;
+
+    @Autowired
+    private FileManageController fileManageController;
 
     private static final Popup FLOATING_POPUP = new Popup();
 
@@ -76,6 +78,7 @@ public class PopUpContextMenuController implements Initializable {
             }
         });
 
+
     }
 
 
@@ -102,6 +105,7 @@ public class PopUpContextMenuController implements Initializable {
 
                 // 关闭 popup
                 FLOATING_POPUP.hide();
+                fileManageController.reloadFile();
 
             }
         });
@@ -125,7 +129,7 @@ public class PopUpContextMenuController implements Initializable {
 
                 // 关闭 popup
                 FLOATING_POPUP.hide();
-
+                fileManageController.reloadFile();
             }
         });
     }

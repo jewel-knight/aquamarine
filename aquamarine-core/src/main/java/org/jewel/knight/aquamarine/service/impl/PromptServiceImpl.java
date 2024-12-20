@@ -21,7 +21,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -91,11 +90,14 @@ public class PromptServiceImpl implements PromptService {
                 FileUrlResource fileUrlResource;
                 try {
                     fileUrlResource = new FileUrlResource(file.toURI().toURL());
-                } catch (MalformedURLException e) {
-                    throw new RuntimeException(e);
+                    TextReader textReader = new TextReader(fileUrlResource);
+                    List<Document> documents = textReader.get();
+                    simpleVectorStore.add(documents);
+                } catch (Exception e) {
+//                    throw new RuntimeException(e);
+
                 }
-                TextReader textReader = new TextReader(fileUrlResource);
-                simpleVectorStore.add(textReader.get());
+
             }
             isInit = true;
         }
