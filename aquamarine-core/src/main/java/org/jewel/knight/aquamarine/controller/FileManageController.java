@@ -1,5 +1,7 @@
 package org.jewel.knight.aquamarine.controller;
 
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import org.jewel.knight.aquamarine.controller.event.FlexibleNodeEvent;
 import org.jewel.knight.aquamarine.controller.event.Position;
 import org.jewel.knight.aquamarine.event.FileEvent;
@@ -84,8 +86,7 @@ public class FileManageController implements Initializable {
     @Autowired
     private ConfigurableApplicationContext applicationContext;
 
-    @Autowired
-    private PromptService promptService;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -184,6 +185,7 @@ public class FileManageController implements Initializable {
             public void handle(ActionEvent event) {
                 String fileName = fileTree.getFocusModel().getFocusedItem().getValue();
                 fileService.deleteFile(path, fileName);
+                reloadFile();
             }
         });
 
@@ -198,6 +200,8 @@ public class FileManageController implements Initializable {
                 popUpContextMenuController.addRenameFilePopUp("Rename MarkDown", fileTree, path, fileName);
             }
         });
+
+
 
     }
 
@@ -214,6 +218,11 @@ public class FileManageController implements Initializable {
 //        listenFileTree();
 ////        });
 //    }
+
+    public void reloadFile() {
+        fileTree.getRoot().getChildren().clear();
+        listenFileTree();
+    }
 
     private void listenFileTree() {
         Pair<String, File[]> files = fileService.getFiles(path);
