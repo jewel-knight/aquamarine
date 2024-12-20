@@ -1,6 +1,5 @@
 package org.jewel.knight.aquamarine.controller;
 
-import javafx.stage.Popup;
 import org.jewel.knight.aquamarine.check.LangGrammarCheck;
 import org.jewel.knight.aquamarine.controller.event.InputKeyPressEvent;
 import org.jewel.knight.aquamarine.loader.CssLoader;
@@ -117,6 +116,7 @@ public class InputController implements Initializable {
 
     @Autowired
     private KnowledgeBaseController knowledgeBaseController;
+
 
     /**
      * 是否第一次加载
@@ -254,7 +254,7 @@ public class InputController implements Initializable {
         HBox suggestItemGraphic = (HBox) suggestItem.getGraphic();
         contextMenuController.setMenuHover(suggestItemGraphic);
         contextMenuController.setMenu(suggestItemGraphic, "Ai Suggest", "", null);
-        ragItem.setOnAction(event -> {
+        suggestItem.setOnAction(event -> {
             String selectedText = input.getSelectedText();
             promptService.suggest(selectedText);
 //            input.setVisible(false);
@@ -271,11 +271,16 @@ public class InputController implements Initializable {
         contextMenuController.setMenuHover(ragItemGraphic);
         contextMenuController.setMenu(ragItemGraphic, "Rag", "Ctrl+G", null);
         ragItem.setOnAction(event -> {
+
+            String currTabPath = editorTabController.getCurrTabPath();
+            promptService.reloadData(currTabPath);
 //            input.setVisible(false);
 //            input.setEditable(false);
 //            input.setDisable(true);
             //// todo 由于 PopUp 无法正确获取聚焦事件，导致输入法出现问题，后续在修改
             knowledgeBaseController.showPopup();
+
+
 //            promptService.initData();
         });
     }

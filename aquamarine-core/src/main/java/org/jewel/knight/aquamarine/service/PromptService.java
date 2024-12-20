@@ -23,4 +23,10 @@ public interface PromptService {
     String suggest(String text);
 
     void initData();
+
+    /**
+     * 重新加载数据
+     * @param path
+     */
+    void reloadData(String path);
 }

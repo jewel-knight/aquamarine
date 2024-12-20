@@ -61,7 +61,7 @@ public class KnowledgeBaseController implements Initializable {
             }
         });
         // 监听输入框的变化
-        input.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+        input.addEventHandler(KeyEvent.KEY_RELEASED, event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 output.deleteText( output.getLength() - LOADING_TEXT.length(), output.getLength());
                 String rag = promptService.rag(inputText);
